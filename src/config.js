@@ -1,4 +1,4 @@
 export const config = {
-    api : "http://localhost:3000",
-    mainPage : "http://localhost:3001"
+    api : "https://chatapp-main-server.vercel.app",
+    mainPage : "https://chatapp-react-weld.vercel.app"
 }
