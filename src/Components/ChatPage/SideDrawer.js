@@ -14,6 +14,7 @@ function SideDrawer() {
   const [show, setShow] = useState(false);
 
   const { user, setselectedChat, chats, setchats, Notification, setNotification } = ChatState();
+  
   const navigate = useNavigate();
 
   function showList() {

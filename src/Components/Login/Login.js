@@ -5,6 +5,7 @@ import axios from 'axios';
 import { config } from '../../config';
 import '../Login/login.css';
 import { useNavigate } from 'react-router-dom';
+import { ChatState } from '../../Context/Chatprovider';
 
 function Login() {
 
@@ -17,6 +18,8 @@ function Login() {
     const toast = useToast();
 
     const navigate = useNavigate();
+
+    const { setUser } = ChatState();
 
     const formik = useFormik({
         initialValues: {
@@ -43,6 +46,8 @@ function Login() {
                 setImageLoading(false);
                 setLoginError();
                 localStorage.setItem("userInfo", JSON.stringify(data.data));
+                const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+                setUser(userInfo);
                 navigate('/chats');
             } catch (error) {
                 console.log(error);

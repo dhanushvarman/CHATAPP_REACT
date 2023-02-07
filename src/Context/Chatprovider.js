@@ -1,10 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { config } from "../config";
-
 
 const chatContext = createContext();
-
-
 
 const ChatProvider = ({children})=>{
     const[user,setUser] = useState();

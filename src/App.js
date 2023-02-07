@@ -10,13 +10,13 @@ import ResetPassword from './Components/Login/ResetPassword';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Login/>}></Route>
-      <Route path='/chats' element={<Chatpage/>}></Route>
-      <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
-      <Route path='/forgot-password/reset/:token' element={<ResetPassword/>}></Route>
-    </Routes>
+    <BrowserRouter >
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/chats' element={<Chatpage />}></Route>
+        <Route path='/forgot-password' element={<ForgotPassword />}></Route>
+        <Route path='/forgot-password/reset/:token' element={<ResetPassword />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
